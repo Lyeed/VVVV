@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta36.dtd" >
-   <PATCH nodename="D:\UserDATA\JulienDATA\Russie\VC\proj.v4p" scrollx="12" scrolly="0" systemname="proj" filename="D:\UserDATA\JulienDATA\Russie\VC\proj.v4p">
+   <PATCH nodename="D:\UserDATA\JulienDATA\Russie\VC\proj.v4p" scrollx="12" scrolly="-360" systemname="proj" filename="D:\UserDATA\JulienDATA\Russie\VC\proj.v4p">
    <BOUNDS type="Window" left="-108" top="-108" width="23256" height="13176">
    </BOUNDS>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InABox" id="5">
@@ -28,8 +28,6 @@
    <PIN pinname="Render State" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <LINK srcnodeid="33" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
-   </LINK>
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="35">
    <BOUNDS type="Node" left="5844" top="2184" width="100" height="100">
    </BOUNDS>
@@ -43,11 +41,11 @@
    </PIN>
    <PIN pinname="TranslateY" visible="1" slicecount="1" values="-0.69">
    </PIN>
-   <PIN pinname="Rotate" visible="1">
+   <PIN pinname="Rotate" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="CenterY" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="CenterX" slicecount="1" values="0">
+   <PIN pinname="CenterX" slicecount="1" values="-0.93">
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="36">
@@ -95,7 +93,7 @@
    </PIN>
    <PIN pinname="Output Y" visible="1">
    </PIN>
-   <PIN pinname="Spread Count" slicecount="1" values="139">
+   <PIN pinname="Spread Count" slicecount="1" visible="1" values="287">
    </PIN>
    <PIN pinname="Height" slicecount="1" values="1">
    </PIN>
@@ -103,9 +101,9 @@
    </PIN>
    <PIN pinname="Input Y" visible="1">
    </PIN>
-   <PIN pinname="Phase" slicecount="1" visible="1" values="0.13">
+   <PIN pinname="Phase" slicecount="1" visible="1" values="0.47">
    </PIN>
-   <PIN pinname="Factor" slicecount="1" values="1.01">
+   <PIN pinname="Factor" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Width" slicecount="1" values="1">
    </PIN>
@@ -125,11 +123,11 @@
    </PIN>
    <PIN pinname="Phase" visible="1" slicecount="1" values="0.184930765177481">
    </PIN>
-   <PIN pinname="Factor" slicecount="1" visible="1" values="-0.47">
+   <PIN pinname="Factor" slicecount="1" visible="1" values="-1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" visible="1" values="0.23">
+   <PIN pinname="Width" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Height" slicecount="1" visible="1" values="0.95">
+   <PIN pinname="Height" slicecount="1" visible="1" values="1">
    </PIN>
    <PIN pinname="Input Y" slicecount="1" visible="1" values="0">
    </PIN>
@@ -140,12 +138,10 @@
    </LINK>
    <LINK srcnodeid="43" srcpinname="Output Y" dstnodeid="42" dstpinname="Input Y">
    </LINK>
-   <LINK srcnodeid="38" srcpinname="Output" dstnodeid="35" dstpinname="Rotate">
-   </LINK>
    <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="44">
    <BOUNDS type="Node" left="7152" top="516" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Period" slicecount="1" values="4.88">
+   <PIN pinname="Period" slicecount="1" visible="1" values="1.34799068566684">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -171,5 +167,49 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="50" srcpinname="Render State Out" dstnodeid="33" dstpinname="Render State">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Layer" dstnodeid="5" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="WaveShaper (Value)" nodename="WaveShaper (Value)" componentmode="Hidden" id="61">
+   <BOUNDS type="Node" left="8460" top="1260" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Shape" slicecount="1" values="Triangle">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="LFO (Animation)" nodename="LFO (Animation)" componentmode="Hidden" id="62">
+   <BOUNDS type="Node" left="9288" top="636" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Reverse" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Period" slicecount="1" values="12.49">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="62" srcpinname="Output" dstnodeid="61" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="44" dstpinname="Period">
+   </LINK>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="63">
+   <BOUNDS type="Node" left="6684" top="1092" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="500">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="63" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="63" srcpinname="Output" dstnodeid="42" dstpinname="Spread Count">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="43" dstpinname="Height">
+   </LINK>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="43" dstpinname="Width">
    </LINK>
    </PATCH>

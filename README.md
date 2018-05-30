@@ -1,4 +1,4 @@
 # VVVV
 Visual Coding project using VVVV toolkit
 
-![Screenshot](image.png)
+![Screenshot](https://github.com/Lyeed/VVVV/blob/master/image.PNG)
